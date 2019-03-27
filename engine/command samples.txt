@@ -1,0 +1,12 @@
+# This will train and produce a classifier
+python engine/classifier.py TRAIN datasets models/20180402-114759/20180402-114759.pb models/lfw_classifier.pkl --batch_size 150 --min_nrof_images_per_class 150 --nrof_train_images_per_class 100 --use_split_dataset --image_size 150
+
+# No Test set
+python engine/classifier.py TRAIN datasets models/20180402-114759/20180402-114759.pb models/lfw_classifier.pkl --batch_size 100 --min_nrof_images_per_class 100 --nrof_train_images_per_class 100 --image_size 150
+
+# Test
+python engine/classifier.py CLASSIFY datasets models/20180402-114759/20180402-114759.pb models/lfw_classifier.pkl --image_size 150
+
+
+# Tripltes loss training
+python engine/train_tripletloss.py --logs_base_dir logs/facenet/ --models_base_dir models/ --data_dir dataset_200 --image_size 150 --model_def models.inception_resnet_v1 --lfw_dir dataset_200 --optimizer RMSPROP --learning_rate 0.01 --weight_decay 1e-4 --people_per_batch 2 --images_per_person 30 --max_nrof_epochs 20 --epoch_size 1

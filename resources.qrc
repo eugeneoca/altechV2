@@ -1,0 +1,29 @@
+<RCC>
+  <qresource prefix="Logo">
+    <file>src/icon/Altech Logo.png</file>
+  </qresource>
+  <qresource prefix="cam_mode_icon">
+    <file>src/icon/mode.png</file>
+  </qresource>
+  <qresource prefix="upload_icon">
+    <file>src/icon/upload.png</file>
+  </qresource>
+  <qresource prefix="camera_icon">
+    <file>src/icon/camera.png</file>
+  </qresource>
+  <qresource prefix="about_icon">
+    <file>src/icon/about.png</file>
+  </qresource>
+  <qresource prefix="storage_icon">
+    <file>src/icon/storage.png</file>
+  </qresource>
+  <qresource prefix="cloud_icon">
+    <file>src/icon/cloud.png</file>
+  </qresource>
+  <qresource prefix="database_icon">
+    <file>src/icon/database.png</file>
+  </qresource>
+  <qresource prefix="preview_icon">
+    <file>src/icon/preview.png</file>
+  </qresource>
+</RCC>
