@@ -255,35 +255,6 @@ color: rgb(255, 255, 255);</string>
               </property>
              </widget>
             </item>
-            <item row="2" column="0">
-             <widget class="QPushButton" name="btn_mode">
-              <property name="font">
-               <font>
-                <family>Segoe UI</family>
-                <pointsize>8</pointsize>
-                <weight>50</weight>
-                <italic>false</italic>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">font: 8pt &quot;Segoe UI&quot;;</string>
-              </property>
-              <property name="text">
-               <string>RTSP/CAM Mode</string>
-              </property>
-              <property name="icon">
-               <iconset resource="resources.qrc">
-                <normaloff>:/cam_mode_icon/src/icon/mode.png</normaloff>:/cam_mode_icon/src/icon/mode.png</iconset>
-              </property>
-              <property name="default">
-               <bool>true</bool>
-              </property>
-              <property name="flat">
-               <bool>true</bool>
-              </property>
-             </widget>
-            </item>
            </layout>
           </widget>
          </item>

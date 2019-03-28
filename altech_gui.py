@@ -2,12 +2,11 @@
 
 # Form implementation generated from reading ui file 'altech_gui.ui'
 #
-# Created by: PyQt5 UI code generator 5.12
+# Created by: PyQt5 UI code generator 5.11.3
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -140,26 +139,10 @@ class Ui_MainWindow(object):
         self.txt_log.setReadOnly(True)
         self.txt_log.setObjectName("txt_log")
         self.gridLayout_3.addWidget(self.txt_log, 1, 0, 1, 1)
-        self.btn_mode = QtWidgets.QPushButton(self.frame)
-        font = QtGui.QFont()
-        font.setFamily("Segoe UI")
-        font.setPointSize(8)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setWeight(50)
-        self.btn_mode.setFont(font)
-        self.btn_mode.setStyleSheet("font: 8pt \"Segoe UI\";")
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap(":/cam_mode_icon/src/icon/mode.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.btn_mode.setIcon(icon1)
-        self.btn_mode.setDefault(True)
-        self.btn_mode.setFlat(True)
-        self.btn_mode.setObjectName("btn_mode")
-        self.gridLayout_3.addWidget(self.btn_mode, 2, 0, 1, 1)
         self.horizontalLayout.addWidget(self.frame)
-        icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap(":/preview_icon/src/icon/preview.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.tabs.addTab(self.tab, icon2, "")
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap(":/preview_icon/src/icon/preview.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.tabs.addTab(self.tab, icon1, "")
         self.tab_5 = QtWidgets.QWidget()
         self.tab_5.setObjectName("tab_5")
         self.gridLayout_6 = QtWidgets.QGridLayout(self.tab_5)
@@ -212,9 +195,9 @@ class Ui_MainWindow(object):
         self.label_2.setObjectName("label_2")
         self.gridLayout_4.addWidget(self.label_2, 1, 0, 1, 1)
         self.gridLayout_6.addWidget(self.frame_2, 0, 1, 1, 1)
-        icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap(":/database_icon/src/icon/database.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.tabs.addTab(self.tab_5, icon3, "")
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap(":/database_icon/src/icon/database.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.tabs.addTab(self.tab_5, icon2, "")
         self.tab_3 = QtWidgets.QWidget()
         self.tab_3.setObjectName("tab_3")
         self.gridLayout_9 = QtWidgets.QGridLayout(self.tab_3)
@@ -238,9 +221,9 @@ class Ui_MainWindow(object):
         self.tree_cloud_directory.setObjectName("tree_cloud_directory")
         self.gridLayout_7.addWidget(self.tree_cloud_directory, 1, 0, 1, 1)
         self.gridLayout_9.addWidget(self.frame_3, 0, 1, 1, 1)
-        icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap(":/cloud_icon/src/icon/cloud.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.tabs.addTab(self.tab_3, icon4, "")
+        icon3 = QtGui.QIcon()
+        icon3.addPixmap(QtGui.QPixmap(":/cloud_icon/src/icon/cloud.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.tabs.addTab(self.tab_3, icon3, "")
         self.tab_4 = QtWidgets.QWidget()
         self.tab_4.setObjectName("tab_4")
         self.gridLayout_12 = QtWidgets.QGridLayout(self.tab_4)
@@ -262,17 +245,17 @@ class Ui_MainWindow(object):
         self.btn_sync.setAutoFillBackground(False)
         self.btn_sync.setStyleSheet("background-color: rgb(75, 150, 0);\n"
 "font: 13pt \"Segoe UI\";")
-        icon5 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap(":/upload_icon/src/icon/upload.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.btn_sync.setIcon(icon5)
+        icon4 = QtGui.QIcon()
+        icon4.addPixmap(QtGui.QPixmap(":/upload_icon/src/icon/upload.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.btn_sync.setIcon(icon4)
         self.btn_sync.setDefault(True)
         self.btn_sync.setFlat(True)
         self.btn_sync.setObjectName("btn_sync")
         self.gridLayout_10.addWidget(self.btn_sync, 2, 0, 1, 1)
         self.gridLayout_12.addWidget(self.frame_5, 0, 1, 1, 1)
-        icon6 = QtGui.QIcon()
-        icon6.addPixmap(QtGui.QPixmap(":/storage_icon/src/icon/storage.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.tabs.addTab(self.tab_4, icon6, "")
+        icon5 = QtGui.QIcon()
+        icon5.addPixmap(QtGui.QPixmap(":/storage_icon/src/icon/storage.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.tabs.addTab(self.tab_4, icon5, "")
         self.tab_2 = QtWidgets.QWidget()
         self.tab_2.setObjectName("tab_2")
         self.gridLayout_16 = QtWidgets.QGridLayout(self.tab_2)
@@ -326,9 +309,9 @@ class Ui_MainWindow(object):
         spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.gridLayout_13.addItem(spacerItem2, 0, 2, 1, 1)
         self.gridLayout_16.addLayout(self.gridLayout_13, 0, 0, 1, 1)
-        icon7 = QtGui.QIcon()
-        icon7.addPixmap(QtGui.QPixmap(":/about_icon/src/icon/about.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.tabs.addTab(self.tab_2, icon7, "")
+        icon6 = QtGui.QIcon()
+        icon6.addPixmap(QtGui.QPixmap(":/about_icon/src/icon/about.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.tabs.addTab(self.tab_2, icon6, "")
         self.gridLayout.addWidget(self.splitter, 0, 0, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
@@ -351,7 +334,6 @@ class Ui_MainWindow(object):
         self.camWindow1.setText(_translate("MainWindow", "CAMERA 1"))
         self.camWindow4.setText(_translate("MainWindow", "CAMERA 4"))
         self.label.setText(_translate("MainWindow", "Data Logging"))
-        self.btn_mode.setText(_translate("MainWindow", "RTSP/CAM Mode"))
         self.tabs.setTabText(self.tabs.indexOf(self.tab), _translate("MainWindow", "Preview"))
         self.groupBox_2.setTitle(_translate("MainWindow", "Actions"))
         self.btn_RegisterIdentity.setText(_translate("MainWindow", "Register New Identity"))
@@ -375,6 +357,5 @@ class Ui_MainWindow(object):
         self.label_11.setText(_translate("MainWindow", "Circuit Design Integrator"))
         self.label_4.setText(_translate("MainWindow", "AL-TECHNOLOGIES"))
         self.tabs.setTabText(self.tabs.indexOf(self.tab_2), _translate("MainWindow", "About"))
-
 
 import resources_rc

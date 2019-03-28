@@ -53,10 +53,7 @@
       </property>
      </widget>
     </item>
-    <item row="2" column="1">
-     <widget class="QComboBox" name="cmb_CameraList"/>
-    </item>
-    <item row="3" column="0" colspan="2">
+    <item row="2" column="0" colspan="2">
      <widget class="QFrame" name="frame_3">
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
@@ -185,7 +182,6 @@
  <tabstops>
   <tabstop>txt_fname</tabstop>
   <tabstop>txt_lname</tabstop>
-  <tabstop>cmb_CameraList</tabstop>
   <tabstop>btn_startRegistration</tabstop>
   <tabstop>btn_stopRegistration</tabstop>
  </tabstops>
@@ -286,22 +282,6 @@
     <hint type="destinationlabel">
      <x>195</x>
      <y>70</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btn_stopRegistration</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>cmb_CameraList</receiver>
-   <slot>setDisabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>438</x>
-     <y>133</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>240</x>
-     <y>97</y>
     </hint>
    </hints>
   </connection>

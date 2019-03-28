@@ -2,12 +2,11 @@
 
 # Form implementation generated from reading ui file 'form_RegisterIdentity.ui'
 #
-# Created by: PyQt5 UI code generator 5.12
+# Created by: PyQt5 UI code generator 5.11.3
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -34,9 +33,6 @@ class Ui_MainWindow(object):
         self.txt_lname = QtWidgets.QLineEdit(self.centralwidget)
         self.txt_lname.setObjectName("txt_lname")
         self.formLayout_2.setWidget(1, QtWidgets.QFormLayout.FieldRole, self.txt_lname)
-        self.cmb_CameraList = QtWidgets.QComboBox(self.centralwidget)
-        self.cmb_CameraList.setObjectName("cmb_CameraList")
-        self.formLayout_2.setWidget(2, QtWidgets.QFormLayout.FieldRole, self.cmb_CameraList)
         self.frame_3 = QtWidgets.QFrame(self.centralwidget)
         self.frame_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -92,7 +88,7 @@ class Ui_MainWindow(object):
         self.txt_process.setObjectName("txt_process")
         self.formLayout.setWidget(0, QtWidgets.QFormLayout.FieldRole, self.txt_process)
         self.gridLayout_2.addWidget(self.frame_2, 1, 0, 1, 1)
-        self.formLayout_2.setWidget(3, QtWidgets.QFormLayout.SpanningRole, self.frame_3)
+        self.formLayout_2.setWidget(2, QtWidgets.QFormLayout.SpanningRole, self.frame_3)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 512, 21))
@@ -109,13 +105,11 @@ class Ui_MainWindow(object):
         self.btn_stopRegistration.clicked['bool'].connect(self.btn_stopRegistration.setEnabled)
         self.btn_stopRegistration.clicked['bool'].connect(self.txt_fname.setDisabled)
         self.btn_stopRegistration.clicked['bool'].connect(self.txt_lname.setDisabled)
-        self.btn_stopRegistration.clicked['bool'].connect(self.cmb_CameraList.setDisabled)
         self.btn_stopRegistration.clicked['bool'].connect(self.btn_startRegistration.setDisabled)
         self.btn_startRegistration.clicked['bool'].connect(self.btn_startRegistration.setEnabled)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
         MainWindow.setTabOrder(self.txt_fname, self.txt_lname)
-        MainWindow.setTabOrder(self.txt_lname, self.cmb_CameraList)
-        MainWindow.setTabOrder(self.cmb_CameraList, self.btn_startRegistration)
+        MainWindow.setTabOrder(self.txt_lname, self.btn_startRegistration)
         MainWindow.setTabOrder(self.btn_startRegistration, self.btn_stopRegistration)
 
     def retranslateUi(self, MainWindow):
@@ -129,6 +123,5 @@ class Ui_MainWindow(object):
         self.btn_stopRegistration.setText(_translate("MainWindow", "Stop"))
         self.label_3.setText(_translate("MainWindow", "Process:"))
         self.label_4.setText(_translate("MainWindow", "Directory:"))
-
 
 import resources_rc

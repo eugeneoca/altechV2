@@ -2,12 +2,11 @@
 
 # Form implementation generated from reading ui file 'form_TrainIdentity.ui'
 #
-# Created by: PyQt5 UI code generator 5.12
+# Created by: PyQt5 UI code generator 5.11.3
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -62,6 +61,5 @@ class Ui_MainWindow(object):
         self.btn_startTraining.setText(_translate("MainWindow", "Start Training"))
         self.label.setText(_translate("MainWindow", "Total Identities:"))
         self.label_2.setText(_translate("MainWindow", "Process:"))
-
 
 import resources_rc

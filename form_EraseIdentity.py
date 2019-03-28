@@ -2,12 +2,11 @@
 
 # Form implementation generated from reading ui file 'form_EraseIdentity.ui'
 #
-# Created by: PyQt5 UI code generator 5.12
+# Created by: PyQt5 UI code generator 5.11.3
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -50,6 +49,5 @@ class Ui_MainWindow(object):
         self.label_2.setText(_translate("MainWindow", "Note: The following task cannot be undone."))
         self.label.setText(_translate("MainWindow", "Select identity:"))
         self.btn_Erase.setText(_translate("MainWindow", "Erase"))
-
 
 import resources_rc
