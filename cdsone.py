@@ -284,6 +284,7 @@ class Main(QMainWindow, Ui_MainWindow):
 		
 		self.btn_RegisterIdentity.clicked.connect(self.show_RegistrationForm)
 		self.btn_EraseIdentity.clicked.connect(self.show_EraseIdentityForm)
+		self.tabs.currentChanged.connect(self.onChangeTab)
 		
 		self.upload_manager = threading.Thread(target=self.uploadManager)
 		self.upload_manager.daemon = True
@@ -333,6 +334,81 @@ class Main(QMainWindow, Ui_MainWindow):
 			self.save_local=1
 			print("No internet connection.")
 			print("Will be saving on local.")
+			
+	def onChangeTab(self, index):
+		if index==2:
+			print("Listing cloud storage contents...")
+			results = self.cloud_directory_service.files().list(fields="files(id, name, parents)").execute()
+			items = results.get('files', [])
+			if self.save_local:
+				print("No internet.")
+				return
+			Thread(target=self.populateCloudDirectory, args=[items]).start()
+		elif index==3:
+			print("Listing local storage contents...")
+			Thread(target=self.populateLocalDirectory).start()
+			
+	def populateCloudDirectory(self, files):
+		self.tree_cloud_directory.clear()
+		authorized_items = QTreeWidgetItem(["AUTHORIZED","",""])
+		self.tree_cloud_directory.addTopLevelItem(authorized_items)
+		unauthorized_items = QTreeWidgetItem(["UNAUTHORIZED","",""])
+		self.tree_cloud_directory.addTopLevelItem(unauthorized_items)
+		for item in files:
+			if item['parents'][0]=="1zUBeAaaooz-HdbYXeS5qi4H8v34ItzDD":
+				name = item['name']
+				name_array = name.split('-')
+				year = name_array[1]
+				month = name_array[2]
+				day = name_array[3]
+				hour = name_array[4]
+				minutes = name_array[5]
+				date = month+"/"+day+"/"+year
+				id = item['id']
+				authorized_items.addChild(QTreeWidgetItem([name,date, id]))
+			elif item['parents'][0]=="1KOPaoV8aSoEqrru__1afLjJY7cYFdJ8H":
+				name = item['name']
+				name_array = name.split('-')
+				year = name_array[1]
+				month = name_array[2]
+				day = name_array[3]
+				hour = name_array[4]
+				minutes = name_array[5]
+				date = month+"/"+day+"/"+year
+				id = item['id']
+				unauthorized_items.addChild(QTreeWidgetItem([name, date, id]))
+				
+	def populateLocalDirectory(self):
+		self.tree_local_directory.clear()
+		authorized_items = QTreeWidgetItem(["AUTHORIZED","",""])
+		self.tree_local_directory.addTopLevelItem(authorized_items)
+		unauthorized_items = QTreeWidgetItem(["UNAUTHORIZED","",""])
+		self.tree_local_directory.addTopLevelItem(unauthorized_items)
+		
+		for i, item in enumerate(os.listdir("AUTHORIZED")):
+			if i>=100:
+				break
+			name = item
+			name_array = name.split('-')
+			year = name_array[1]
+			month = name_array[2]
+			day = name_array[3]
+			hour = name_array[4]
+			minutes = name_array[5]
+			date = month+"/"+day+"/"+year
+			authorized_items.addChild(QTreeWidgetItem([name,date]))
+		for i, item in enumerate(os.listdir("UNAUTHORIZED")):
+			if i>=100:
+				break
+			name = item
+			name_array = name.split('-')
+			year = name_array[1]
+			month = name_array[2]
+			day = name_array[3]
+			hour = name_array[4]
+			minutes = name_array[5]
+			date = month+"/"+day+"/"+year
+			unauthorized_items.addChild(QTreeWidgetItem([name,date]))
 			
 	def show_EraseIdentityForm(self):
 		self.window = QMainWindow()
