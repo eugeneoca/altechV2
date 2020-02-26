@@ -55,7 +55,7 @@ with tf.Session().as_default() as sess:
                 			i+=1
                 	
                 except Exception as error:
-                	pass
+                	print(error)
                 frame = cv.resize(frame,(780, 480))
                 cv.imshow("Capturing Face Signatures", frame)
                 if cv.waitKey(1) & 0xFF == ord('q'):
