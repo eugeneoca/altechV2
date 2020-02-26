@@ -48,8 +48,8 @@ with tf.Session().as_default() as sess:
                     bounding_box[0]+bounding_box[2], bounding_box[1] + bounding_box[3]), (0, 155, 255), 2)
                 feed_dict = {images_placeholder: [
                     face_patch], phase_train_placeholder: False}
-                embeddings.initialize_all_variables()
-                embs = sess.run(embeddings, feed_dict=feed_dict)
+                init = embeddings.global_variables_initializer()
+                embs = sess.run(init, feed_dict=feed_dict)
                 if len(embs[0]) == 512:
                     if i == (max+1):
                         print("Done.")
